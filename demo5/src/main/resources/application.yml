@@ -9,3 +9,9 @@ spring:
             uri: https://github.com/ARNIXMINADEO/java-practice/config-data
             basedir: config-data
             default-label: main
+            username: ${GIT_USER}
+            password: ${GIT_PASSWORD}
+    security:
+      user:
+        name: root
+        password: s3cr3t3
