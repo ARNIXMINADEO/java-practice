@@ -7,7 +7,7 @@ spring:
         server:
           git:
             uri: https://github.com/ARNIXMINADEO/java-practice.git
-            basedir: config-data
+            basedir: devel/config-data
             username: ${GIT_USER}
             password: ${GIT_PASSWORD}
             default-label: devel
