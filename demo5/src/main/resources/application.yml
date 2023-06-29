@@ -7,7 +7,6 @@ spring:
         server:
           git:
             uri: https://github.com/ARNIXMINADEO/java-practice.git
-            basedir: config-data
             username: ${GIT_USER}
             password: ${GIT_PASSWORD}
             default-label: devel
@@ -23,12 +22,12 @@ spring:
           profiles:
             active: default
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
+    management:
+      endpoints:
+        web:
+          exposure:
+            include: "*"
+      endpoint:
+        health:
+          show-details: ALWAYS
   
