@@ -21,7 +21,7 @@ spring:
         application:
           name: java-practice
           profiles:
-            active: service
+            active: default,service,test
 
     management:
       endpoints:
