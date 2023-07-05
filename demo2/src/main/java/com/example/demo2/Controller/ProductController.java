@@ -33,7 +33,7 @@ import com.fasterxml.jackson.databind.json.JsonMapper;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping(value = "/products")
+@RequestMapping(value = "/product")
 public class ProductController {
     
     @Autowired

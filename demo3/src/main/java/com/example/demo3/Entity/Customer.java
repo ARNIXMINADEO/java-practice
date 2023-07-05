@@ -13,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -53,10 +54,11 @@ public class Customer implements Serializable{
     @Column(name = "photo_url")
     private String photoUrl;
 
+    @Valid
+    @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     @NotNull(message = "La region es obligatoria")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     private Region region;
 
     private String state;
